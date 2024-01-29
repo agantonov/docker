@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 RUN DEBIAN_FRONTEND=noninteractive \
   apt-get update \
   && apt-get install -y net-tools tcpdump ifstat iperf htop openssh-server \
-                        locales sudo iproute2 vim less \
+                        locales sudo iproute2 vim less kmod vlan iputils-ping \
   && rm -rf /var/lib/apt/lists/*
 RUN mkdir /var/run/sshd
 RUN useradd -ms /bin/bash aantonov
